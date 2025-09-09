@@ -1,5 +1,5 @@
 ---
-"claude-dev": patch
+"kd-cline": patch
 ---
 
 Fix Ollama connection issue to default endpoint at port 11434

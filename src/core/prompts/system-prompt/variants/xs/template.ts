@@ -65,6 +65,26 @@ Key: Never include an option to toggle modes.
 **plan_mode_respond** — PLAN-only reply. Params: response, needs_more_exploration (optional).  
 Include options/trade-offs when helpful, ask if plan matches, then add the exact mode-switch line.
 
+
+## 技术栈示例
+
+### KWC 组件示例：
+\`\`\`javascript
+import { KingdeeElement } from 'kwc';
+
+export default class UserProfile extends KingdeeElement {
+  // KWC 组件实现
+}
+\`\`\`
+
+### LWC 组件示例：
+\`\`\`javascript
+import { LightningElement } from 'lwc';
+
+export default class ContactCard extends LightningElement {
+  // LWC 组件实现
+}
+\`\`\`
 ## {{${SystemPromptSection.OBJECTIVE}}}
 
 ## {{${SystemPromptSection.SYSTEM_INFO}}}

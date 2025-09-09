@@ -1,5 +1,5 @@
 ---
-"claude-dev": patch
+"kd-cline": patch
 ---
 
 Dify.ai api integration
