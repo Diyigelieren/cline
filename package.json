@@ -2,13 +2,13 @@
 	"name": "kd-cline",
 	"displayName": "kd Cline",
 	"description": "Autonomous coding agent right in your IDE, capable of creating/editing files, running commands, using the browser, and more with your permission every step of the way.",
-	"version": "0.0.4",
+	"version": "0.0.9",
 	"icon": "assets/icons/icon.png",
 	"engines": {
 		"vscode": "^1.84.0"
 	},
 	"author": {
-		"name": "Catherine"
+		"name": "Kingdee Inc."
 	},
 	"license": "Apache-2.0",
 	"publisher": "kd-saoudrizwan",
@@ -151,55 +151,55 @@
 			{
 				"command": "cline.openInNewTab",
 				"title": "Open In New Tab",
-				"category": "Cline"
+				"category": "KD Cline"
 			},
 			{
 				"command": "cline.dev.createTestTasks",
 				"title": "Create Test Tasks",
-				"category": "Cline",
+				"category": "KD Cline",
 				"when": "cline.isDevMode"
 			},
 			{
 				"command": "cline.addToChat",
 				"title": "Add to Cline",
-				"category": "Cline"
+				"category": "KD Cline"
 			},
 			{
 				"command": "cline.addTerminalOutputToChat",
 				"title": "Add to Cline",
-				"category": "Cline"
+				"category": "KD Cline"
 			},
 			{
 				"command": "cline.focusChatInput",
 				"title": "Jump to Chat Input",
-				"category": "Cline"
+				"category": "KD Cline"
 			},
 			{
 				"command": "cline.generateGitCommitMessage",
 				"title": "Generate Commit Message with Cline",
-				"category": "Cline",
+				"category": "KD Cline",
 				"icon": "$(robot)"
 			},
 			{
 				"command": "cline.abortGitCommitMessage",
 				"title": "Generate Commit Message with Cline - Stop",
-				"category": "Cline",
+				"category": "KD Cline",
 				"icon": "$(debug-stop)"
 			},
 			{
 				"command": "cline.explainCode",
 				"title": "Explain with Cline",
-				"category": "Cline"
+				"category": "KD Cline"
 			},
 			{
 				"command": "cline.improveCode",
 				"title": "Improve with Cline",
-				"category": "Cline"
+				"category": "KD Cline"
 			},
 			{
 				"command": "cline.openWalkthrough",
 				"title": "Open Walkthrough",
-				"category": "Cline"
+				"category": "KD Cline"
 			}
 		],
 		"keybindings": [

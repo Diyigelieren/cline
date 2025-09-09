@@ -143,4 +143,4 @@ To contribute to the project, start with our [Contributing Guide](CONTRIBUTING.m
 
 ## License
 
-[Apache 2.0 © 2025 Cline Bot Inc.](./LICENSE)
+[Apache 2.0 © 2025 Kingdee Inc.](./LICENSE)

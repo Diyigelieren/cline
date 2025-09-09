@@ -25,6 +25,7 @@ export const config = createVariant(ModelFamily.NEXT_GEN)
 		SystemPromptSection.ACT_VS_PLAN,
 		SystemPromptSection.TASK_PROGRESS,
 		SystemPromptSection.CAPABILITIES,
+		SystemPromptSection.TECH_STACK,
 		SystemPromptSection.FEEDBACK,
 		SystemPromptSection.RULES,
 		SystemPromptSection.SYSTEM_INFO,

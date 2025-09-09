@@ -8,6 +8,8 @@ export const baseTemplate = `{{${SystemPromptSection.AGENT_ROLE}}}
 
 ## {{${SystemPromptSection.CAPABILITIES}}}
 
+## {{${SystemPromptSection.TECH_STACK}}}
+
 ## {{${SystemPromptSection.EDITING_FILES}}}
 
 ## TOOLS
@@ -70,7 +72,7 @@ Include options/trade-offs when helpful, ask if plan matches, then add the exact
 
 ### KWC 组件示例：
 \`\`\`javascript
-import { KingdeeElement } from 'kwc';
+import { KingdeeElement } from '@kdcloudjs/kwc';
 
 export default class UserProfile extends KingdeeElement {
   // KWC 组件实现

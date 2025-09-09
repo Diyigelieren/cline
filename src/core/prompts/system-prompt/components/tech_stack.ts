@@ -15,8 +15,18 @@ export const TECH_STACK_CONTENT = `
 - **Kingdee Web Components (KWC)**
   - 标签: <kd-component>
   - 基类: KingdeeElement
-  - 导入: 'kwc'
+  - 导入: '@kdcloudjs/kwc'
   - 应用场景: 金蝶平台开发
+
+### 语法要求
+  - 使用正确的导入语句
+  - 继承正确的基类
+  - 严格遵循LWC和KWC语法, 在LWC和KWC组件时, 避免出现React、Angular、Vue等其他框架的语法
+  - KWC与LWC的语法差异:
+    1. KWC的 标签、基类、导入 与LWC不同
+    2. KWC不用创建 .js-meta.xml 文件
+    3. 其余语法与LWC语法高度相似
+  - 文件命名禁止出现'-'符号。
 
 ### 技术栈选择算法
 1. 关键词检测: 扫描用户输入中的技术栈关键词
@@ -27,11 +37,11 @@ export const TECH_STACK_CONTENT = `
 ### 代码转换规则
 当检测到技术栈不匹配时:
 - 自动将 LightningElement 转换为 KingdeeElement
-- 自动将 'lwc' 导入转换为 'kwc' 导入
+- 自动将 'lwc' 导入转换为 '@kdcloudjs/kwc' 导入
 - 保持组件逻辑不变，只调整框架特定部分
 `
 
 export async function getTechStackSection(variant: PromptVariant, _context: SystemPromptContext): Promise<string> {
-  const template = variant.componentOverrides?.[SystemPromptSection.TECH_STACK]?.template || TECH_STACK_CONTENT
-  return new TemplateEngine().resolve(template, {})
+	const template = variant.componentOverrides?.[SystemPromptSection.TECH_STACK]?.template || TECH_STACK_CONTENT
+	return new TemplateEngine().resolve(template, {})
 }

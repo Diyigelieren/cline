@@ -23,6 +23,7 @@ export const config = createVariant(ModelFamily.GENERIC)
 		SystemPromptSection.ACT_VS_PLAN,
 		SystemPromptSection.TODO,
 		SystemPromptSection.CAPABILITIES,
+		SystemPromptSection.TECH_STACK,
 		SystemPromptSection.RULES,
 		SystemPromptSection.SYSTEM_INFO,
 		SystemPromptSection.OBJECTIVE,

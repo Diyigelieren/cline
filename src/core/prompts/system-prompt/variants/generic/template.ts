@@ -30,6 +30,10 @@ export const baseTemplate = `{{${SystemPromptSection.AGENT_ROLE}}}
 
 ====
 
+{{${SystemPromptSection.TECH_STACK}}}
+
+====
+
 {{${SystemPromptSection.FEEDBACK}}}
 
 ====
@@ -50,7 +54,7 @@ export const baseTemplate = `{{${SystemPromptSection.AGENT_ROLE}}}
 
 ### KWC 组件示例：
 \`\`\`javascript
-import { KingdeeElement } from 'kwc';
+import { KingdeeElement } from '@kdcloudjs/kwc';
 
 export default class UserProfile extends KingdeeElement {
   // KWC 组件实现
