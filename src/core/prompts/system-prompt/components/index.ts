@@ -10,6 +10,7 @@ import { getObjectiveSection } from "./objective"
 import { getRulesSection } from "./rules"
 import { getSystemInfo } from "./system_info"
 import { getUpdatingTaskProgress } from "./task_progress"
+import { getTechStackSection } from "./tech_stack"
 import { getToolUseSection } from "./tool_use"
 import { getUserInstructions } from "./user_instructions"
 
@@ -37,6 +38,8 @@ export function getSystemPromptComponents() {
 			id: SystemPromptSection.CAPABILITIES,
 			fn: getCapabilitiesSection,
 		},
+		// 添加技术栈组件
+		{ id: SystemPromptSection.TECH_STACK, fn: getTechStackSection },
 		{ id: SystemPromptSection.RULES, fn: getRulesSection },
 		{ id: SystemPromptSection.OBJECTIVE, fn: getObjectiveSection },
 		{

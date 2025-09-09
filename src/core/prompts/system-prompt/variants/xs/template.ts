@@ -69,4 +69,26 @@ Include options/trade-offs when helpful, ask if plan matches, then add the exact
 
 ## {{${SystemPromptSection.SYSTEM_INFO}}}
 
+====
+
+## KWC技术栈示例
+
+### KWC 组件示例：
+\`\`\`javascript
+import { KingdeeElement } from '@kdcloudjs/kwc';
+
+export default class UserProfile extends KingdeeElement {
+  // KWC 组件实现
+}
+\`\`\`
+
+### LWC 组件示例：
+\`\`\`javascript
+import { LightningElement } from 'lwc';
+
+export default class ContactCard extends LightningElement {
+  // LWC 组件实现
+}
+\`\`\`
+
 ## {{${SystemPromptSection.USER_INSTRUCTIONS}}}`

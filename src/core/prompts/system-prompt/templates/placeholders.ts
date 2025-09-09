@@ -13,6 +13,8 @@ export enum SystemPromptSection {
 	USER_INSTRUCTIONS = "USER_INSTRUCTIONS_SECTION",
 	FEEDBACK = "FEEDBACK_SECTION",
 	TASK_PROGRESS = "TASK_PROGRESS_SECTION",
+	// 添加新的枚举值
+	TECH_STACK = "tech_stack",
 }
 
 /**
