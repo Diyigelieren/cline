@@ -5,7 +5,7 @@ import { telemetryService } from "@/services/telemetry"
 import type { Controller } from "../index"
 
 /**
- * Opens the Cline walkthrough in VSCode
+ * Opens the Kline walkthrough in VSCode
  * @param controller The controller instance
  * @param request Empty request
  * @returns Empty response

@@ -39,7 +39,7 @@ const SapAiCoreModelPicker: React.FC<SapAiCoreModelPickerProps> = ({
 			allSupportedModels.includes(deployedModel),
 		)
 
-		// Models that are supported in Cline but NOT deployed
+		// Models that are supported in Kline but NOT deployed
 		const supportedButNotDeployed = allSupportedModels.filter(
 			(supportedModel: string) => !sapAiCoreDeployedModels.includes(supportedModel),
 		)

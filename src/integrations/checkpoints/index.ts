@@ -796,7 +796,7 @@ export class TaskCheckpointManager {
 				if (!checkpointsWarningShown) {
 					checkpointsWarningShown = true
 					await this.setcheckpointManagerErrorMessage(
-						"Checkpoints are taking longer than expected to initialize. Working in a large repository? Consider re-opening Cline in a project that uses git, or disabling checkpoints.",
+						"Checkpoints are taking longer than expected to initialize. Working in a large repository? Consider re-opening Kline in a project that uses git, or disabling checkpoints.",
 					)
 				}
 			}, 7_000)
@@ -811,7 +811,7 @@ export class TaskCheckpointManager {
 				{
 					milliseconds: 15_000,
 					message:
-						"Checkpoints taking too long to initialize. Consider re-opening Cline in a project that uses git, or disabling checkpoints.",
+						"Checkpoints taking too long to initialize. Consider re-opening Kline in a project that uses git, or disabling checkpoints.",
 				},
 			)
 
@@ -825,7 +825,7 @@ export class TaskCheckpointManager {
 			// If the error was a timeout, we disable all checkpoint operations for the rest of the task
 			if (errorMessage.includes("Checkpoints taking too long to initialize")) {
 				await this.setcheckpointManagerErrorMessage(
-					"Checkpoints initialization timed out. Consider re-opening Cline in a project that uses git, or disabling checkpoints.",
+					"Checkpoints initialization timed out. Consider re-opening Kline in a project that uses git, or disabling checkpoints.",
 				)
 			} else {
 				await this.setcheckpointManagerErrorMessage(errorMessage)

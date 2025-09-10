@@ -409,7 +409,7 @@ class StandaloneTerminalManager {
 		// Create new terminal
 		const newTerminalInfo = this.registry.createTerminal({
 			cwd: cwd,
-			name: `Cline Terminal ${this.registry.nextId}`,
+			name: `Kline Terminal ${this.registry.nextId}`,
 		})
 		this.terminalIds.add(newTerminalInfo.id)
 		console.log(`[StandaloneTerminalManager] Created new terminal ${newTerminalInfo.id}`)

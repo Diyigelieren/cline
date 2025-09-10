@@ -14,7 +14,7 @@ description: "Learn how to configure and use Anthropic Claude models with Cline.
 
 ### Supported Models
 
-Cline supports the following Anthropic Claude models:
+Kline supports the following Anthropic Claude models:
 
 -   `claude-opus-4-1-20250805`
 -   `claude-opus-4-20250514`
@@ -32,7 +32,7 @@ See [Anthropic's Model Documentation](https://docs.anthropic.com/en/docs/about-c
 
 ### Configuration in Cline
 
-1.  **Open Cline Settings:** Click the settings icon (⚙️) in the Cline panel.
+1.  **Open Kline Settings:** Click the settings icon (⚙️) in the Kline panel.
 2.  **Select Provider:** Choose "Anthropic" from the "API Provider" dropdown.
 3.  **Enter API Key:** Paste your Anthropic API key into the "Anthropic API Key" field.
 4.  **Select Model:** Choose your desired Claude model from the "Model" dropdown.
@@ -43,11 +43,11 @@ See [Anthropic's Model Documentation](https://docs.anthropic.com/en/docs/about-c
 Anthropic models offer an "Extended Thinking" feature, designed to give them enhanced reasoning capabilities for complex tasks. This feature allows the model to output its step-by-step thought process before delivering a final answer, providing transparency and enabling more thorough analysis for challenging prompts.
 
 When extended thinking is in Cline, the model generates `thinking` content blocks that detail its internal reasoning. These insights are then incorporated into its final response.
-Cline users can leverage this by checking the `Enable Extended Thinking` box below the model selection menu after selecting a Claude Model from any provider.
+Kline users can leverage this by checking the `Enable Extended Thinking` box below the model selection menu after selecting a Claude Model from any provider.
 
 **Key Aspects of Extended Thinking:**
 
--   **Supported Models:** This feature is available for select models, including variants of Claude Opus 4, Claude Sonnet 4, and Claude Sonnet 3.7. The specific models listed in the "Supported Models" section above with the `:thinking` suffix are pre-configured in Cline to utilize this.
+-   **Supported Models:** This feature is available for select models, including variants of Claude Opus 4, Claude Sonnet 4, and Claude Sonnet 3.7. The specific models listed in the "Supported Models" section above with the `:thinking` suffix are pre-configured in Kline to utilize this.
 -   **Summarized Thinking (Claude 4):** For Claude 4 models, the API returns a summary of the full thinking process to balance insight with efficiency and prevent misuse. You are billed for the full thinking tokens, not just the summary.
 -   **Streaming:** Extended thinking responses, including the `thinking` blocks, can be streamed.
 -   **Tool Use & Prompt Caching:** Extended thinking interacts with tool use (requiring thinking blocks to be passed back) and prompt caching (with specific behaviors around cache invalidation and context).

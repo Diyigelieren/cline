@@ -246,7 +246,7 @@ service UiService {
   // Subscribe to settings button clicked events
   rpc subscribeToSettingsButtonClicked(WebviewProviderTypeRequest) returns (stream Empty);
   
-  // Subscribe to partial message updates (streaming Cline messages as they're built)
+  // Subscribe to partial message updates (streaming Kline messages as they're built)
   rpc subscribeToPartialMessage(EmptyRequest) returns (stream ClineMessage);
   
   // Initialize webview when it launches
@@ -267,6 +267,6 @@ service UiService {
   // Opens a URL in the default browser
   rpc openUrl(StringRequest) returns (Empty);
   
-  // Opens the Cline walkthrough
+  // Opens the Kline walkthrough
   rpc openWalkthrough(EmptyRequest) returns (Empty);
 }

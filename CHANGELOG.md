@@ -11,11 +11,11 @@
 
 ## [3.26.7]
 
-- Add 200k context window variant for Claude Sonnet 4 to OpenRouter and Cline providers
+- Add 200k context window variant for Claude Sonnet 4 to OpenRouter and Kline providers
 
 ## [3.26.6]
 
-- Add free Grok Coder model to Cline provider for users looking for a fast, free coding model option
+- Add free Grok Coder model to Kline provider for users looking for a fast, free coding model option
 - Fix GPT-5 models not respecting auto-compact setting when enabled, improving context window management
 - Fix provider retry attempts not showing proper user feedback during rate limiting scenarios
 - Improve markdown and code block styling to automatically adapt when switching VS Code themes
@@ -41,8 +41,8 @@
 ## [3.26.2]
 
 - Improve OpenRouter model parsing to show reasoning budget sliders for all models that support thinking, not just Claude models
-- Fix OpenRouter context window error handling to properly extract error codes from error messages, resolving "Unexpected API Response" errors with GPT-5 on Cline provider
-- Fix GPT-5 context window configuration for OpenAI/OpenRouter/Cline providers to use correct 272K limit
+- Fix OpenRouter context window error handling to properly extract error codes from error messages, resolving "Unexpected API Response" errors with GPT-5 on Kline provider
+- Fix GPT-5 context window configuration for OpenAI/OpenRouter/Kline providers to use correct 272K limit
 - Remove max tokens configuration from Sonic Alpha model
 - Add Go language support to deep-planning feature (Thanks @yuvalman!)
 - Fix typo in Focus Chain settings page (Thanks @joyceerhl!)
@@ -59,7 +59,7 @@
 ## [3.26.0]
 
 - Add Z AI as a new API provider with GLM-4.5 and GLM-4.5 Air models, offering competitive performance with cost-effective pricing especially for Chinese language tasks (Thanks @jues!)
-- Add Cline Sonic Alpha model - experimental advanced model with 262K context window for complex coding tasks
+- Add Kline Sonic Alpha model - experimental advanced model with 262K context window for complex coding tasks
 - Add support for LM Studio local models from v0 API endpoint with configurable max tokens
 - Fix Ollama context window configuration not being used in requests
 
@@ -84,7 +84,7 @@
 - **Focus Chain:** Automatically creates and maintains todo lists as you work with Cline, breaking down complex tasks into manageable steps with real-time progress tracking
 - **Auto Compact:** Intelligently manages conversation context to prevent token limit errors by automatically compacting older messages while preserving important context
 - **Deep Planning:** New `/deep-planning` slash command for structured 4-step implementation planning that integrates with Focus Chain for automatic progress tracking
-- Add support for 200k context window for Claude Sonnet 4 in OpenRouter and Cline providers
+- Add support for 200k context window for Claude Sonnet 4 in OpenRouter and Kline providers
 - Add option to configure custom base URL for Requesty provider
 
 ## [3.24.0]
@@ -109,7 +109,7 @@
 - Implemented a retry strategy for Cerebras to handle rate limit issues due to its generation speed
 - Add support for GPT-5 models to SAP AI Core Provider
 - Support sending context to active webview when editor panels are opened.
-- Fix bug where running out of credits on Cline accounts would show '402 empty body' response instead of 'buy credits' component
+- Fix bug where running out of credits on Kline accounts would show '402 empty body' response instead of 'buy credits' component
 - Fix LiteLLM Proxy Provider Cost Tracking
 
 ## [3.21.0]
@@ -212,13 +212,13 @@ Add Opus 4.1 through Claude Code
 ## [3.19.6]
 
 - Improve Kimi K2 model provider routing with additional provider options for better availability and performance
-- Fixed terminal bug where Cline failed to capture output of certain fast-running commands
+- Fixed terminal bug where Kline failed to capture output of certain fast-running commands
 - Fixed bug with increasing auto approved number of requests not resetting the counter mid-task
 
 ## [3.19.5]
 
 - Add Groq as a new API provider with support for all Groq models including Kimi-K2
-- Add user role display in organization UI for Cline account users
+- Add user role display in organization UI for Kline account users
 - Fix message dialogs not showing option buttons properly
 - Fix authentication issues when using multiple VSCode windows
 
@@ -232,7 +232,7 @@ Add Opus 4.1 through Claude Code
 
 ## [3.19.2]
 
-- Show request ID in error messages returned by Cline Accounts API to help debug user reported issues
+- Show request ID in error messages returned by Kline Accounts API to help debug user reported issues
 
 ## [3.19.1]
 
@@ -240,26 +240,26 @@ Add Opus 4.1 through Claude Code
 
 ## [3.19.0]
 
-- Add Kimi-K2 as a recommended model in the Cline Provider, and route to Together/Groq for 131k context window and high throughput
+- Add Kimi-K2 as a recommended model in the Kline Provider, and route to Together/Groq for 131k context window and high throughput
 - Added API Key support for Bedrock integration
 
 ## [3.18.14]
 
-- Fix bug where Cline account users logged in with invalid token would not be shown as logged out in webview presentation layer
+- Fix bug where Kline account users logged in with invalid token would not be shown as logged out in webview presentation layer
 
 ## [3.18.13]
 
-- Fix authentication issue where Cline accounts users would keep getting logged out or seeing 'Unexpected API response' errors
+- Fix authentication issue where Kline accounts users would keep getting logged out or seeing 'Unexpected API response' errors
 
 ## [3.18.12]
 
-- Fix flaky organization switching behavior in Cline provider that caused UI inconsistencies and double loading
+- Fix flaky organization switching behavior in Kline provider that caused UI inconsistencies and double loading
 - Fix insufficient credits error display to properly show error messages when account balance is too low
-- Improve credit balance validation and error handling for Cline provider requests
+- Improve credit balance validation and error handling for Kline provider requests
 
 ## [3.18.11]
 
-- Fix authentication issues with Cline provider by ensuring the client always uses the latest auth token
+- Fix authentication issues with Kline provider by ensuring the client always uses the latest auth token
 
 ## [3.18.10]
 
@@ -268,8 +268,8 @@ Add Opus 4.1 through Claude Code
 
 ## [3.18.9]
 
-- Fix streaming reliability issues with Cline provider that could cause connection problems during long conversations
-- Fix authentication error handling for Cline provider to show clearer error messages when not signed in and prevent recursive failed requests
+- Fix streaming reliability issues with Kline provider that could cause connection problems during long conversations
+- Fix authentication error handling for Kline provider to show clearer error messages when not signed in and prevent recursive failed requests
 - Remove incorrect pricing display for SAP AI Core provider since it uses non-USD "Capacity Units" that cannot be directly converted (Thanks @ncryptedV1!)
 
 ## [3.18.8]
@@ -294,7 +294,7 @@ Add Opus 4.1 through Claude Code
 ## [3.18.4]
 
 - Add support for Gemini 2.5 Pro and Flash to SAP AI Core Provider
-- Fix logging in with Cline account not getting past welcome screen
+- Fix logging in with Kline account not getting past welcome screen
 
 ## [3.18.3]
 
@@ -319,9 +319,9 @@ Add Opus 4.1 through Claude Code
 
 ## [3.18.0]
 
-- Optimized Cline to work with the Claude 4 family of models, resulting in improved performance, reliability, and new capabilities
+- Optimized Kline to work with the Claude 4 family of models, resulting in improved performance, reliability, and new capabilities
 - Added a new Gemini CLI provider that allows you to use your local Gemini CLI authentication to access Gemini models for free (Thanks @google-gemini!)
-- Optimized Cline to work with the Gemini 2.5 family of models
+- Optimized Kline to work with the Gemini 2.5 family of models
 - Updated the default and recommended model to Claude 4 Sonnet for the best performance
 - Fix race condition in Plan/Act mode switching
 - Improve robustness of search and replace parsing
@@ -346,7 +346,7 @@ Add Opus 4.1 through Claude Code
 
 - Add Claude Code as a new API provider, allowing integration with Anthropic's Claude Code CLI tool and Claude Max Plan (Thanks @BarreiroT!)
 - Add SAP AI Core as a new API provider with support for Claude and GPT models (Thanks @schardosin!)
-- Add configurable default terminal profile setting, allowing users to specify which terminal Cline should use (Thanks @valinha!)
+- Add configurable default terminal profile setting, allowing users to specify which terminal Kline should use (Thanks @valinha!)
 - Add terminal output size constraint setting to limit how much terminal output is processed
 - Add MCP Rich Display settings to the settings page for persistent configuration (Thanks @Vl4diC0de!)
 - Improve copy button functionality with refactored reusable components (Thanks @shouhanzen!)
@@ -373,7 +373,7 @@ Add Opus 4.1 through Claude Code
 
 ## [3.17.12]
 
-- **Free Grok Model Available!** Access Grok 3 completely free through the Cline provider
+- **Free Grok Model Available!** Access Grok 3 completely free through the Kline provider
 - Add collapsible MCP response panels to keep conversations focused on the main AI responses while still allowing access to detailed MCP output (Thanks @valinha!)
 - Prioritize active files (open tabs) at the top of the file context menu when using @ mentions (Thanks @abeatrix!)
 - Fix context menu to properly default to "File" option instead of incorrectly selecting "Git Commits"
@@ -396,7 +396,7 @@ Add Opus 4.1 through Claude Code
 
 ## [3.17.9]
 
-- Aligning Cline to work with Claude 4 model family (Experimental)
+- Aligning Kline to work with Claude 4 model family (Experimental)
 - Add task timeline scrolling feature
 - Add support for uploading CSV and XLSX files for data analysis and processing
 - Add stable Grok-3 models to xAI provider (grok-3, grok-3-fast, grok-3-mini, grok-3-mini-fast) and update default model from grok-3-beta to grok-3 (Thanks @PeterDaveHello!)
@@ -451,7 +451,7 @@ Add Opus 4.1 through Claude Code
 
 ## [3.17.1]
 
-- Add prompt caching for Claude 4 models on Cline and OpenRouter providers
+- Add prompt caching for Claude 4 models on Kline and OpenRouter providers
 - Increase max tokens for Claude Opus 4 from 4096 to 8192
 
 ## [3.17.0]
@@ -474,9 +474,9 @@ Add Opus 4.1 through Claude Code
 ## [3.16.2]
 
 - Add support for Gemini 2.5 Flash Preview 05-20 model to Vertex AI provider with massive 1M token context window (Thanks @omercelik!)
-- Add keyboard shortcut (Cmd+') to quickly focus Cline from anywhere in VS Code
+- Add keyboard shortcut (Cmd+') to quickly focus Kline from anywhere in VS Code
 - Add lightbulb actions for selected text with options to "Add to Cline", "Explain with Cline", and "Improve with Cline"
-- Automatically focus Cline window after extension updates
+- Automatically focus Kline window after extension updates
 
 ## [3.16.1]
 
@@ -520,7 +520,7 @@ Add Opus 4.1 through Claude Code
 - Added details to auto approve menu and more sensible default controls
 - Add detailed configuration options for LiteLLM provider
 - Add webview telemetry for users who have opted in to telemetry
-- Update Gemini in OpenRouter/Cline providers to use implicit caching
+- Update Gemini in OpenRouter/Kline providers to use implicit caching
 - Fix freezing issues during rendering of large streaming text
 - Fix grey screen webview crashes by releasing memory after every diff edit
 - Fix breaking out of diff auto-scroll
@@ -540,9 +540,9 @@ Add Opus 4.1 through Claude Code
 - Add ability to favorite a task, allowing it to be kept when clearing all tasks
 - Add npm script for issue creation (Thanks DaveFres!)
 - Add confirmation dialog to Delete All History button
-- Add ability to allow the user to type their next message into the chat while Cline is taking action
+- Add ability to allow the user to type their next message into the chat while Kline is taking action
 - Add ability to generate commit message via cline (Thanks zapp88!)
-- Add improvements to caching for gemini models on OpenRouter and Cline providers
+- Add improvements to caching for gemini models on OpenRouter and Kline providers
 - Add improvements to allow scrolling the file being edited.
 - Add ui for windsurf and cursor rules
 - Add mistral medium-3 model
@@ -575,7 +575,7 @@ Add Opus 4.1 through Claude Code
 - Add support for custom model ID in AWS Bedrock provider, enabling use of Application Inference Profile (Thanks @clicube!)
 - Add more robust caching & cache tracking for gemini & vertex providers
 - Add support for LaTeX rendering
-- Add support for custom API request timeout. Timeouts were 15-30s, but can now be configured via settings for OpenRouter/Cline & Ollama (Thanks @WingsDrafterwork!)
+- Add support for custom API request timeout. Timeouts were 15-30s, but can now be configured via settings for OpenRouter/Kline & Ollama (Thanks @WingsDrafterwork!)
 - Add truncation notice when truncating manually
 - Add a timeout setting for the terminal connection, allowing users to set a time to wait for terminal startup
 - Add copy button to code blocks
@@ -631,7 +631,7 @@ Add Opus 4.1 through Claude Code
 
 ## [3.13.0]
 
-- Add Cline rules popover under the chat field, allowing you to easily add, enable & disable workspace level or global rule files
+- Add Kline rules popover under the chat field, allowing you to easily add, enable & disable workspace level or global rule files
 - Add new slash command menu letting you type “/“ to do quick actions like creating new tasks
 - Add ability to edit past messages, with options to restore your workspace back to that point
 - Allow sending a message when selecting an option provided by the question or plan tool
@@ -664,10 +664,10 @@ Add Opus 4.1 through Claude Code
 
 ## [3.12.0]
 
-- Add favorite toggles for models when using the Cline & OpenRouter providers
+- Add favorite toggles for models when using the Kline & OpenRouter providers
 - Add auto-approve options for edits/reads outside of the workspace
 - Improve diff editing animation for large files
-- Add indicator showing number of diff edits when Cline edits a file
+- Add indicator showing number of diff edits when Kline edits a file
 - Add streaming support and reasoning effort option to xAI's Grok 3 Mini
 - Add settings button to MCP popover to easily modify installed servers
 - Fix bug where browser tool actions would show unparsed results in the chat view
@@ -679,13 +679,13 @@ Add Opus 4.1 through Claude Code
 
 - Redesign checkpoint UI to declutter chat view by using a subtle indicator line that expands to a popover on hover, with a new date indicator for when it was created
 - Add support for xAI's provider's Grok 3 models
-- Add more robust error tracking for users opted in to telemetry (thank you for helping us make Cline better!)
+- Add more robust error tracking for users opted in to telemetry (thank you for helping us make Kline better!)
 
 ## [3.10.1]
 
 - Add CMD+' keyboard shortcut to add selected text to Cline
-- Cline now auto focuses the text field when using 'Add to Cline' shortcut
-- Add new 'Create New Task' tool to let Cline start a new task autonomously!
+- Kline now auto focuses the text field when using 'Add to Cline' shortcut
+- Add new 'Create New Task' tool to let Kline start a new task autonomously!
 - Fix Mermaid diagram issues
 - Fix Gemini provider cost calculation to take new tiered pricing structure into account
 
@@ -701,8 +701,8 @@ Add Opus 4.1 through Claude Code
 
 ## [3.9.2]
 
-- Add recommended models for Cline provider
-- Add ability to detect when user edits files manually so Cline knows to re-read, leading to reduced diff edit errors
+- Add recommended models for Kline provider
+- Add ability to detect when user edits files manually so Kline knows to re-read, leading to reduced diff edit errors
 - Add improvements to file mention searching for faster searching
 - Add scoring logic to file mentions to sort and exclude results based on relevance
 - Add Support for Bytedance Doubao (Thanks Tunixer!)
@@ -724,7 +724,7 @@ Add Opus 4.1 through Claude Code
 - Add UI for adding remote servers
 - Add Mentions Feature Guide and update related documentation
 - Fix bug where menu would open in sidebar and open tab
-- Fix issue with Cline accounts not showing user info in popout tabs
+- Fix issue with Kline accounts not showing user info in popout tabs
 - Fix bug where menu buttons wouldn't open view in sidebar
 
 ## [3.8.5]
@@ -743,7 +743,7 @@ Add Opus 4.1 through Claude Code
 
 - Add Sambanova Deepseek-V3-0324
 - Add cost calculation support for LiteLLM provider
-- Fix bug where Cline would use plan_mode_response bug without response parameter
+- Fix bug where Kline would use plan_mode_response bug without response parameter
 
 ## [3.8.3]
 
@@ -763,14 +763,14 @@ Add Opus 4.1 through Claude Code
 ## [3.8.0]
 
 - Add 'Add to Cline' as an option when you right-click in a file or the terminal, making it easier to add context to your current task
-- Add 'Fix with Cline' code action - when you see a lightbulb icon in your editor, you can now select 'Fix with Cline' to send the code and associated errors for Cline to fix. (Cursor users can also use the 'Quick Fix (CMD + .)' menu to see this option)
-- Add Account view to display billing and usage history for Cline account users. You can now keep track of credits used and transaction history right in the extension!
+- Add 'Fix with Cline' code action - when you see a lightbulb icon in your editor, you can now select 'Fix with Cline' to send the code and associated errors for Kline to fix. (Cursor users can also use the 'Quick Fix (CMD + .)' menu to see this option)
+- Add Account view to display billing and usage history for Kline account users. You can now keep track of credits used and transaction history right in the extension!
 - Add 'Sort underling provider routing' setting to Cline/OpenRouter allowing you to sort provider used by throughput, price, latency, or the default (combination of price and uptime)
 - Improve rich MCP display with dynamic image loading and support for GIFs
 - Add 'Documentation' menu item to easily access Cline's docs
 - Add OpenRouter's new usage_details feature for more reliable cost reporting
-- Display total space Cline takes on disk next to 'Delete all Tasks' button in History view
-- Fix 'Context Window Exceeded' error for OpenRouter/Cline Accounts (additional support coming soon)
+- Display total space Kline takes on disk next to 'Delete all Tasks' button in History view
+- Fix 'Context Window Exceeded' error for OpenRouter/Kline Accounts (additional support coming soon)
 - Fix bug where OpenRouter model ID would be set to invalid value
 - Add button to delete MCP servers in a failure state
 
@@ -781,9 +781,9 @@ Add Opus 4.1 through Claude Code
 
 ## [3.7.0]
 
-- Cline now displays selectable options when asking questions or presenting a plan, saving you from having to type out responses!
+- Kline now displays selectable options when asking questions or presenting a plan, saving you from having to type out responses!
 - Add support for a `.clinerules/` directory to load multiple files at once (thanks @ryo-ma!)
-- Prevent Cline from reading extremely large files into context that would overload context window
+- Prevent Kline from reading extremely large files into context that would overload context window
 - Improve checkpoints loading performance and display warning for large projects not suited for checkpoints
 - Add SambaNova API provider (thanks @saad-noodleseed!)
 - Add VPC endpoint option for AWS Bedrock profiles (thanks @minorunara!)
@@ -805,11 +805,11 @@ Add Opus 4.1 through Claude Code
 
 ## [3.6.0]
 
-- Add Cline API as a provider option, allowing new users to sign up and get started with Cline for free
+- Add Kline API as a provider option, allowing new users to sign up and get started with Kline for free
 - Optimize checkpoints with branch-per-task strategy, reducing storage required and first task load times
 - Fix problem with Plan/Act toggle keyboard shortcut not working in Windows (thanks @yt3trees!)
 - Add new Gemini models to GCP Vertex (thanks @shohei-ihaya!) and Claude models AskSage (thanks @swhite24!)
-- Improve OpenRouter/Cline error reporting
+- Improve OpenRouter/Kline error reporting
 
 ## [3.5.1]
 
@@ -861,7 +861,7 @@ Add Opus 4.1 through Claude Code
 
 ## [3.3.0]
 
-- Add .clineignore to block Cline from accessing specified file patterns
+- Add .clineignore to block Kline from accessing specified file patterns
 - Add keyboard shortcut + tooltips for Plan/Act toggle
 - Fix bug where new files won't show up in files dropdown
 - Add automatic retry for rate limited requests (thanks @ViezeVingertjes!)
@@ -911,7 +911,7 @@ Add Opus 4.1 through Claude Code
 
 ## [3.2.0]
 
-- Add Plan/Act mode toggle to let you plan tasks with Cline before letting him get to work
+- Add Plan/Act mode toggle to let you plan tasks with Kline before letting him get to work
 - Easily switch between API providers and models using a new popup menu under the chat field
 - Add VS Code LM API provider to run models provided by other VS Code extensions (e.g. GitHub Copilot). Shoutout to @julesmons, @RaySinner, and @MrUbens for putting this together!
 - Add on/off toggle for MCP servers to disable them when not in use. Thanks @MrUbens!
@@ -927,7 +927,7 @@ Add Opus 4.1 through Claude Code
 
 ## [3.1.7]
 
-- Add ability to change viewport size and headless mode when Cline asks to launch the browser
+- Add ability to change viewport size and headless mode when Kline asks to launch the browser
 
 ## [3.1.6]
 
@@ -936,7 +936,7 @@ Add Opus 4.1 through Claude Code
 
 ## [3.1.5]
 
-- Fix bug where Cline couldn't read "@/" import path aliases from tool results
+- Fix bug where Kline couldn't read "@/" import path aliases from tool results
 
 ## [3.1.4]
 
@@ -948,7 +948,7 @@ Add Opus 4.1 through Claude Code
 
 ## [3.1.0]
 
-- Added checkpoints: Snapshots of workspace are automatically created whenever Cline uses a tool
+- Added checkpoints: Snapshots of workspace are automatically created whenever Kline uses a tool
 - Compare changes: Hover over any tool use to see a diff between the snapshot and current workspace state
 - Restore options: Choose to restore just the task state, just the workspace files, or both
 - New 'See new changes' button appears after task completion, providing an overview of all workspace changes
@@ -1000,16 +1000,16 @@ Add Opus 4.1 through Claude Code
 
 ## [3.0.0]
 
-- Cline now uses a search & replace diff based approach when editing large files to prevent code deletion issues.
+- Kline now uses a search & replace diff based approach when editing large files to prevent code deletion issues.
 - Adds support for a more comprehensive auto-approve configuration, allowing you to specify which tools require approval and which don't.
-- Adds ability to enable system notifications for when Cline needs approval or completes a task.
+- Adds ability to enable system notifications for when Kline needs approval or completes a task.
 - Adds support for a root-level `.clinerules` file that can be used to specify custom instructions for the project.
 
 ## [2.2.0]
 
-- Add support for Model Context Protocol (MCP), enabling Cline to use custom tools like web-search tool or GitHub tool
+- Add support for Model Context Protocol (MCP), enabling Kline to use custom tools like web-search tool or GitHub tool
 - Add MCP server management tab accessible via the server icon in the menu bar
-- Add ability for Cline to dynamically create new MCP servers based on user requests (e.g., "add a tool that gets the latest npm docs")
+- Add ability for Kline to dynamically create new MCP servers based on user requests (e.g., "add a tool that gets the latest npm docs")
 
 ## [2.1.6]
 
@@ -1034,11 +1034,11 @@ Add Opus 4.1 through Claude Code
 
 ## [2.1.1]
 
-- Add stricter prompt to prevent Cline from editing files during a browser session without first closing the browser
+- Add stricter prompt to prevent Kline from editing files during a browser session without first closing the browser
 
 ## [2.1.0]
 
-- Cline now uses Anthropic's new "Computer Use" feature to launch a browser, click, type, and scroll. This gives him more autonomy in runtime debugging, end-to-end testing, and even general web use. Try asking "Look up the weather in Colorado" to see it in action! (Available with Claude 3.5 Sonnet v2)
+- Kline now uses Anthropic's new "Computer Use" feature to launch a browser, click, type, and scroll. This gives him more autonomy in runtime debugging, end-to-end testing, and even general web use. Try asking "Look up the weather in Colorado" to see it in action! (Available with Claude 3.5 Sonnet v2)
 
 ## [2.0.19]
 
@@ -1084,7 +1084,7 @@ Add Opus 4.1 through Claude Code
 
 ## [2.0.9]
 
-- Update system prompt to try to prevent Cline from lazy coding (`// rest of code here...`)
+- Update system prompt to try to prevent Kline from lazy coding (`// rest of code here...`)
 
 ## [2.0.8]
 
@@ -1109,7 +1109,7 @@ Add Opus 4.1 through Claude Code
 
 - New name! Meet Cline, an AI assistant that can use your CLI and Editor
 - Responses are now streamed with a yellow text decoration animation to keep track of Cline's progress as he edits files
-- New Cancel button to give Cline feedback if he goes off in the wrong direction, giving you more control over tasks
+- New Cancel button to give Kline feedback if he goes off in the wrong direction, giving you more control over tasks
 - Re-imagined tool calling prompt resulting in ~40% fewer requests to accomplish tasks + better performance with other models
 - Search and use any model with OpenRouter
 

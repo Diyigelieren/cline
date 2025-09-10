@@ -2,7 +2,7 @@ import { ClineError } from "./ClineError"
 import { IErrorProvider } from "./providers/IErrorProvider"
 
 /**
- * ErrorService handles error logging and tracking for the Cline extension
+ * ErrorService handles error logging and tracking for the Kline extension
  * Uses an abstracted error provider to support multiple error tracking backends
  * Respects user privacy settings and VSCode's global telemetry configuration
  */

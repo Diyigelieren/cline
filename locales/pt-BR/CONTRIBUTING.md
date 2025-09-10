@@ -1,10 +1,10 @@
 # Contribuir para o Cline
 
-Estamos felizes por você estar interessado em contribuir com o Cline. Seja corrigindo um erro, adicionando uma funcionalidade ou melhorando nossa documentação, cada contribuição torna o Cline mais inteligente! Para manter nossa comunidade viva e acolhedora, todos os membros devem cumprir nosso Código de Conduta [Código de Conduta](CODE_OF_CONDUCT.md).
+Estamos felizes por você estar interessado em contribuir com o Cline. Seja corrigindo um erro, adicionando uma funcionalidade ou melhorando nossa documentação, cada contribuição torna o Kline mais inteligente! Para manter nossa comunidade viva e acolhedora, todos os membros devem cumprir nosso Código de Conduta [Código de Conduta](CODE_OF_CONDUCT.md).
 
 ## Relatar erros ou problemas
 
-Relatar erros ajuda a melhorar o Cline para todos! Antes de criar um novo issue, revise as [issues existentes](https://github.com/cline/cline/issues) para evitar duplicações. Quando estiver pronto para relatar um erro, vá até nossa [página de Issues](https://github.com/cline/cline/issues/new/choose), onde você encontrará um modelo que ajudará a preencher as informações relevantes.
+Relatar erros ajuda a melhorar o Kline para todos! Antes de criar um novo issue, revise as [issues existentes](https://github.com/cline/cline/issues) para evitar duplicações. Quando estiver pronto para relatar um erro, vá até nossa [página de Issues](https://github.com/cline/cline/issues/new/choose), onde você encontrará um modelo que ajudará a preencher as informações relevantes.
 
 <blockquote class='warning-note'>
     🔐 <b>Importante:</b> Se você descobrir uma vulnerabilidade de segurança, utilize a <a href="https://github.com/cline/cline/security/advisories/new">ferramenta de segurança do GitHub</a> para relatá-la de forma privada.
@@ -79,5 +79,5 @@ Qualquer pessoa pode contribuir com código para o Cline, mas pedimos que siga e
 
 Ao enviar um Pull Request, você concorda que suas contribuições serão licenciadas sob a mesma licença do projeto ([Apache 2.0](LICENSE)).
 
-Lembre-se: Contribuir com o Cline não é apenas escrever código – é fazer parte de uma comunidade que está moldando o futuro do desenvolvimento assistido por IA. Vamos criar algo incrível juntos! 🚀
+Lembre-se: Contribuir com o Kline não é apenas escrever código – é fazer parte de uma comunidade que está moldando o futuro do desenvolvimento assistido por IA. Vamos criar algo incrível juntos! 🚀
 

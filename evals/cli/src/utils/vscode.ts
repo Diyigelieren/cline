@@ -16,7 +16,7 @@ interface VSCodeResources {
 const workspaceResources = new Map<string, VSCodeResources>()
 
 /**
- * Spawn a VSCode instance with the Cline extension
+ * Spawn a VSCode instance with the Kline extension
  * @param workspacePath The workspace path to open
  * @param vsixPath Optional path to a VSIX file to install
  * @returns The resources created for this VS Code instance
@@ -90,10 +90,10 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 	const evalsEnvPath = path.join(workspacePath, "evals.env")
 	fs.writeFileSync(
 		evalsEnvPath,
-		`# This file activates Cline test mode
+		`# This file activates Kline test mode
 # Created at: ${new Date().toISOString()}
 # 
-# This file is automatically detected by the Cline extension
+# This file is automatically detected by the Kline extension
 # and enables test mode for automated evaluations.
 #
 # Delete this file to deactivate test mode.
@@ -101,7 +101,7 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 	)
 
 	// Create settings.json in the temporary user data directory to disable workspace trust
-	// and configure Cline to auto-open on startup
+	// and configure Kline to auto-open on startup
 	const settingsDir = path.join(tempUserDataDir, "User")
 	fs.mkdirSync(settingsDir, { recursive: true })
 	const settingsPath = path.join(settingsDir, "settings.json")
@@ -115,7 +115,7 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 		// Configure startup behavior
 		"workbench.startupEditor": "none",
 
-		// Auto-open Cline on startup
+		// Auto-open Kline on startup
 		"cline.autoOpenOnStartup": true,
 
 		// Show the activity bar and sidebar
@@ -140,7 +140,7 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 	fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2))
 	console.log(`Created settings.json to disable workspace trust and auto-open Cline`)
 
-	// Create keybindings.json to automatically open Cline on startup
+	// Create keybindings.json to automatically open Kline on startup
 	const keybindingsPath = path.join(settingsDir, "keybindings.json")
 	const keybindings = [
 		{
@@ -155,7 +155,7 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 		},
 	]
 	fs.writeFileSync(keybindingsPath, JSON.stringify(keybindings, null, 2))
-	console.log(`Created keybindings.json to help with Cline activation`)
+	console.log(`Created keybindings.json to help with Kline activation`)
 
 	// Build the command arguments with custom user data directory
 	const args = [
@@ -185,10 +185,10 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 	const startupScript = `
 		// This script will be executed when VS Code starts
 		setTimeout(() => {
-			// Try to open Cline in the sidebar
+			// Try to open Kline in the sidebar
 			require('vscode').commands.executeCommand('workbench.view.extension.kd-saoudrizwan.kd-cline-ActivityBar');
 			
-			// Also try to open Cline in a tab as a fallback
+			// Also try to open Kline in a tab as a fallback
 			setTimeout(() => {
 				require('vscode').commands.executeCommand('cline.openInNewTab');
 			}, 5000);
@@ -236,8 +236,8 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 		const packageJsonPath = path.join(extensionDir, "package.json")
 		const packageJson = {
 			name: "cline-activator",
-			displayName: "Cline Activator",
-			description: "Activates Cline and starts the test server",
+			displayName: "Kline Activator",
+			description: "Activates Kline and starts the test server",
 			version: "0.0.1",
 			engines: {
 				vscode: "^1.60.0",
@@ -264,32 +264,32 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 			 * @param {vscode.ExtensionContext} context
 			 */
 			function activate(context) {
-				console.log('Cline Activator is now active!');
+				console.log('Kline Activator is now active!');
 				
 				// Register the command to activate Cline
 				let disposable = vscode.commands.registerCommand('cline-activator.activate', async function () {
 					try {
-						// Make sure the Cline extension is activated
+						// Make sure the Kline extension is activated
 						const extension = vscode.extensions.getExtension('kd-saoudrizwan.kd-cline');
 						if (!extension) {
-							console.error('Cline extension not found');
+							console.error('Kline extension not found');
 							return;
 						}
 						
 						if (!extension.isActive) {
-							console.log('Activating Cline extension...');
+							console.log('Activating Kline extension...');
 							await extension.activate();
 						}
 						
-						// Show the Cline sidebar
-						console.log('Opening Cline sidebar...');
+						// Show the Kline sidebar
+						console.log('Opening Kline sidebar...');
 						await vscode.commands.executeCommand('workbench.view.extension.kd-saoudrizwan.kd-cline-ActivityBar');
 						
 						// Wait a moment for the sidebar to initialize
 						await new Promise(resolve => setTimeout(resolve, 2000));
 						
-						// Also open Cline in a tab as a fallback
-						console.log('Opening Cline in a tab...');
+						// Also open Kline in a tab as a fallback
+						console.log('Opening Kline in a tab...');
 						await vscode.commands.executeCommand('cline.openInNewTab');
 						
 						// Wait a moment for the tab to initialize
@@ -328,7 +328,7 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 			}
 		`
 		fs.writeFileSync(extensionJsPath, extensionJs)
-		console.log(`Created Cline Activator extension`)
+		console.log(`Created Kline Activator extension`)
 
 		// Try multiple approaches to activate the extension
 		let serverStarted = false
@@ -336,7 +336,7 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 		// Create an activation script to run in VS Code
 		const activationScriptPath = path.join(settingsDir, "activate-cline.js")
 		const activationScript = `
-			// This script will be executed to activate Cline and start the test server
+			// This script will be executed to activate Kline and start the test server
 			const vscode = require('vscode');
 			
 			// Execute the cline-activator.activate command
@@ -347,7 +347,7 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 
 		// Execute the activation script
 		try {
-			console.log("Executing activation script to start Cline and test server...")
+			console.log("Executing activation script to start Kline and test server...")
 			await execa(
 				"code",
 				[
@@ -393,7 +393,7 @@ export async function spawnVSCode(workspacePath: string, vsixPath?: string): Pro
 
 		if (!serverStarted) {
 			console.warn("Test server did not start after multiple attempts")
-			console.log("You may need to manually open the Cline extension in VS Code")
+			console.log("You may need to manually open the Kline extension in VS Code")
 		}
 
 		// Store the resources for this workspace

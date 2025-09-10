@@ -20,7 +20,7 @@ import { telemetryService } from "./services/telemetry"
 import { ShowMessageType } from "./shared/proto/host/window"
 import { getLatestAnnouncementId } from "./utils/announcements"
 /**
- * Performs intialization for Cline that is common to all platforms.
+ * Performs intialization for Kline that is common to all platforms.
  *
  * @param context
  * @returns The webview provider
@@ -32,7 +32,7 @@ export async function initialize(context: vscode.ExtensionContext): Promise<Webv
 	// Initialize PostHog client provider
 	PostHogClientProvider.getInstance()
 
-	// Migrate custom instructions to global Cline rules (one-time cleanup)
+	// Migrate custom instructions to global Kline rules (one-time cleanup)
 	await migrateCustomInstructionsToGlobalRules(context)
 
 	// Migrate welcomeViewCompleted setting based on existing API keys (one-time cleanup)
@@ -63,17 +63,17 @@ async function showVersionUpdateAnnouncement(context: vscode.ExtensionContext) {
 	// Perform post-update actions if necessary
 	try {
 		if (!previousVersion || currentVersion !== previousVersion) {
-			Logger.log(`Cline version changed: ${previousVersion} -> ${currentVersion}. First run or update detected.`)
+			Logger.log(`Kline version changed: ${previousVersion} -> ${currentVersion}. First run or update detected.`)
 
 			// Use the same condition as announcements: focus when there's a new announcement to show
 			const lastShownAnnouncementId = context.globalState.get<string>("lastShownAnnouncementId")
 			const latestAnnouncementId = getLatestAnnouncementId(context)
 
 			if (lastShownAnnouncementId !== latestAnnouncementId) {
-				// Focus Cline when there's a new announcement to show (major/minor updates or fresh installs)
+				// Focus Kline when there's a new announcement to show (major/minor updates or fresh installs)
 				const message = previousVersion
-					? `Cline has been updated to v${currentVersion}`
-					: `Welcome to Cline v${currentVersion}`
+					? `Kline has been updated to v${currentVersion}`
+					: `Welcome to Kline v${currentVersion}`
 				await HostProvider.workspace.openClineSidebarPanel({})
 				await new Promise((resolve) => setTimeout(resolve, 200))
 				HostProvider.window.showMessage({
@@ -91,7 +91,7 @@ async function showVersionUpdateAnnouncement(context: vscode.ExtensionContext) {
 }
 
 /**
- * Performs cleanup when Cline is deactivated that is common to all platforms.
+ * Performs cleanup when Kline is deactivated that is common to all platforms.
  */
 export async function tearDown(): Promise<void> {
 	PostHogClientProvider.getInstance().dispose()

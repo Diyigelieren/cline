@@ -92,7 +92,7 @@ export const TerminalSettingsSection: React.FC<TerminalSettingsSectionProps> = (
 							))}
 						</VSCodeDropdown>
 						<p className="text-xs text-[var(--vscode-descriptionForeground)] mt-1">
-							Select the default terminal Cline will use. 'Default' uses your VSCode global setting.
+							Select the default terminal Kline will use. 'Default' uses your VSCode global setting.
 						</p>
 					</div>
 
@@ -111,7 +111,7 @@ export const TerminalSettingsSection: React.FC<TerminalSettingsSectionProps> = (
 							{inputError && <div className="text-[var(--vscode-errorForeground)] text-xs mt-1">{inputError}</div>}
 						</div>
 						<p className="text-xs text-[var(--vscode-descriptionForeground)]">
-							Set how long Cline waits for shell integration to activate before executing commands. Increase this
+							Set how long Kline waits for shell integration to activate before executing commands. Increase this
 							value if you experience terminal connection timeouts.
 						</p>
 					</div>
@@ -125,7 +125,7 @@ export const TerminalSettingsSection: React.FC<TerminalSettingsSectionProps> = (
 							</VSCodeCheckbox>
 						</div>
 						<p className="text-xs text-[var(--vscode-descriptionForeground)]">
-							When enabled, Cline will reuse existing terminal windows that aren't in the current working directory.
+							When enabled, Kline will reuse existing terminal windows that aren't in the current working directory.
 							Disable this if you experience issues with task lockout after a terminal command.
 						</p>
 					</div>

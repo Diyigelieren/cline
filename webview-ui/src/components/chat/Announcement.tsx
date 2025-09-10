@@ -80,9 +80,9 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 			<h3 style={h3TitleStyle}>
 				🎉{"  "}New in v{minorVersion}
 			</h3>
-			<b>Cline is now available in JetBrains IDEs!</b>
+			<b>Kline is now available in JetBrains IDEs!</b>
 			<div style={{ margin: "0.3rem 0" }} />
-			Cline is now officially available for JetBrains IDEs including IntelliJ IDEA, PyCharm, WebStorm, and more! Experience
+			Kline is now officially available for JetBrains IDEs including IntelliJ IDEA, PyCharm, WebStorm, and more! Experience
 			the same powerful AI coding assistant you love in VSCode, now in your favorite JetBrains environment. Get started at:{" "}
 			<a href="https://plugins.jetbrains.com/plugin/26861-cline">JetBrains Marketplace</a>
 			<div style={{ margin: "12px 0" }} />
@@ -126,11 +126,11 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 							</li>
 							<li>
 								<b>Auto Compact:</b> Auto summarizes your task and next steps when your conversation approaches
-								the model's context window limit. This significantly helps Cline stay on track for long task
+								the model's context window limit. This significantly helps Kline stay on track for long task
 								sessions!
 							</li>
 							<li>
-								<b>Deep Planning:</b> New <code>/deep-planning</code> slash command transforms Cline into an
+								<b>Deep Planning:</b> New <code>/deep-planning</code> slash command transforms Kline into an
 								architect who investigates your codebase, asks clarifying questions, and creates a comprehensive
 								plan before writing any code.
 							</li>

@@ -85,8 +85,8 @@ async function updateAutoApprovalSettings(_context: vscode.ExtensionContext, con
  * @returns The created HTTP server instance
  */
 export function createTestServer(controller: Controller): http.Server {
-	// Try to show the Cline sidebar
-	Logger.log("[createTestServer] Opening Cline in sidebar...")
+	// Try to show the Kline sidebar
+	Logger.log("[createTestServer] Opening Kline in sidebar...")
 	vscode.commands.executeCommand("workbench.view.kd-cline-ActivityBar")
 
 	// Then ensure the webview is focused/loaded
@@ -151,7 +151,7 @@ export function createTestServer(controller: Controller): http.Server {
 				const visibleWebview = WebviewProvider.getVisibleInstance()
 				if (!visibleWebview || !visibleWebview.controller) {
 					res.writeHead(500)
-					res.end(JSON.stringify({ error: "No active Cline instance found" }))
+					res.end(JSON.stringify({ error: "No active Kline instance found" }))
 					return
 				}
 
@@ -307,7 +307,7 @@ export function createTestServer(controller: Controller): http.Server {
 								messages = await getSavedClineMessages(visibleWebview.controller.context, taskId)
 							}
 						} catch (error) {
-							Logger.log(`Error getting saved Cline messages: ${error}`)
+							Logger.log(`Error getting saved Kline messages: ${error}`)
 						}
 
 						try {

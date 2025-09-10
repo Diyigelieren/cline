@@ -27,13 +27,13 @@ service WorkspaceService {
   // Opens the IDE file explorer panel and selects a file or directory.
   rpc openInFileExplorerPanel(OpenInFileExplorerPanelRequest) returns (OpenInFileExplorerPanelResponse); 
 
-  // Opens and focuses the Cline sidebar panel in the host IDE.
+  // Opens and focuses the Kline sidebar panel in the host IDE.
   rpc openClineSidebarPanel(OpenClineSidebarPanelRequest) returns (OpenClineSidebarPanelResponse);
 }
 
 message GetWorkspacePathsRequest {
   // The unique ID for the workspace/project.
-  // This is currently optional in vscode. It is required in other environments where cline is running at
+  // This is currently optional in vscode. It is required in other environments where Kline is running at
   // the application level, and the user can open multiple projects.
   optional string id = 1;
 }
@@ -90,6 +90,6 @@ message OpenInFileExplorerPanelRequest {
 }
 message OpenInFileExplorerPanelResponse {}
 
-// Request/response for opening the Cline sidebar
+// Request/response for opening the Kline sidebar
 message OpenClineSidebarPanelRequest {}
 message OpenClineSidebarPanelResponse {}

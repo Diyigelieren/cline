@@ -5,10 +5,10 @@ import { telemetryService } from "@/services/telemetry"
 import type { Controller } from "../index"
 
 /**
- * Toggles a Cline rule (enable or disable)
+ * Toggles a Kline rule (enable or disable)
  * @param controller The controller instance
  * @param request The toggle request
- * @returns The updated Cline rule toggles
+ * @returns The updated Kline rule toggles
  */
 export async function toggleClineRule(controller: Controller, request: ToggleClineRuleRequest): Promise<ToggleClineRules> {
 	const { isGlobal, rulePath, enabled } = request

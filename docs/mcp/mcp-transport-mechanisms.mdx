@@ -1,9 +1,9 @@
 ---
 title: "MCP Transport Mechanisms"
-description: "Learn about the two primary transport mechanisms for communication between Cline and MCP servers: Standard Input/Output (STDIO) and Server-Sent Events (SSE). Each has distinct characteristics, advantages, and use cases."
+description: "Learn about the two primary transport mechanisms for communication between Kline and MCP servers: Standard Input/Output (STDIO) and Server-Sent Events (SSE). Each has distinct characteristics, advantages, and use cases."
 ---
 
-Model Context Protocol (MCP) supports two primary transport mechanisms for communication between Cline and MCP servers: Standard Input/Output (STDIO) and Server-Sent Events (SSE). Each has distinct characteristics, advantages, and use cases.
+Model Context Protocol (MCP) supports two primary transport mechanisms for communication between Kline and MCP servers: Standard Input/Output (STDIO) and Server-Sent Events (SSE). Each has distinct characteristics, advantages, and use cases.
 
 ## STDIO Transport
 
@@ -40,7 +40,7 @@ STDIO transport is ideal for:
 -   Local integrations and tools running on the same machine
 -   Security-sensitive operations
 -   Low-latency requirements
--   Single-client scenarios (one Cline instance per server)
+-   Single-client scenarios (one Kline instance per server)
 -   Command-line tools or IDE extensions
 
 ### STDIO Implementation Example
@@ -83,7 +83,7 @@ Client                             Server
 
 ### SSE Characteristics
 
--   **Remote Access**: Can be hosted on a different machine from your Cline instance
+-   **Remote Access**: Can be hosted on a different machine from your Kline instance
 -   **Scalability**: Can handle multiple client connections concurrently
 -   **Protocol**: Works over standard HTTP (no special protocols needed)
 -   **Persistence**: Maintains a persistent connection for server-to-client messages
@@ -132,7 +132,7 @@ STDIO servers run locally on the same machine as Cline, which has several import
 -   **Resources**: Uses the local machine's CPU, memory, and disk
 -   **Access Control**: Relies on the local machine's filesystem permissions
 -   **Integration**: Easy integration with local system resources (files, processes)
--   **Execution**: Starts and stops with Cline (child process lifecycle)
+-   **Execution**: Starts and stops with Kline (child process lifecycle)
 -   **Dependencies**: Any dependencies must be installed on the user's machine
 
 #### Practical Example
@@ -143,7 +143,7 @@ A local file search tool using STDIO would:
 -   Have direct access to the local filesystem
 -   Start when needed by Cline
 -   Not require network configuration
--   Need to be installed alongside Cline or via a package manager
+-   Need to be installed alongside Kline or via a package manager
 
 ### SSE: Hosted Deployment Model
 

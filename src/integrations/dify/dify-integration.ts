@@ -247,7 +247,7 @@ export function createDifyIntegration(
 }
 
 /**
- * Utility function to convert Cline file objects to Dify upload format
+ * Utility function to convert Kline file objects to Dify upload format
  * @param files Array of file paths or file objects from Cline
  * @returns Promise with array of file data ready for upload
  */

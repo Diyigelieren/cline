@@ -114,12 +114,12 @@ export abstract class DiffViewProvider {
 	 * going off-task or getting distracted by unrelated issues, which was a problem
 	 * with the previous auto-debug approach. Some users' machines may be slow to
 	 * update diagnostics, so this approach provides a good balance between automation
-	 * and avoiding potential issues where Cline might get stuck in loops due to
+	 * and avoiding potential issues where Kline might get stuck in loops due to
 	 * outdated problem information. If no new problems show up by the time the user
 	 * accepts the changes, they can always debug later using the '@problems' mention.
-	 * This way, Cline only becomes aware of new problems resulting from his edits
+	 * This way, Kline only becomes aware of new problems resulting from his edits
 	 * and can address them accordingly. If problems don't change immediately after
-	 * applying a fix, Cline won't be notified, which is generally fine since the
+	 * applying a fix, Kline won't be notified, which is generally fine since the
 	 * initial fix is usually correct and it may just take time for linters to catch up.
 	 */
 	private async getNewDiagnosticProblems(): Promise<string> {

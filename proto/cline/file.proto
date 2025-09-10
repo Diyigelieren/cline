@@ -37,7 +37,7 @@ service FileService {
   // Search for files in the workspace with fuzzy matching
   rpc searchFiles(FileSearchRequest) returns (FileSearchResults);
   
-  // Toggle a Cline rule (enable or disable)
+  // Toggle a Kline rule (enable or disable)
   rpc toggleClineRule(ToggleClineRuleRequest) returns (ToggleClineRules);
 
   // Toggle a Cursor rule (enable or disable)
@@ -151,7 +151,7 @@ message RuleFile {
   bool already_exists = 3;  // For createRuleFile, indicates if file already existed
 }
 
-// Request to toggle a Cline rule
+// Request to toggle a Kline rule
 message ToggleClineRuleRequest {
   Metadata metadata = 1;
   bool is_global = 2;     // Whether this is a global rule or workspace rule

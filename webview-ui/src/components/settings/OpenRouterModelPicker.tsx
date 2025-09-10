@@ -43,7 +43,7 @@ export interface OpenRouterModelPickerProps {
 	currentMode: Mode
 }
 
-// Featured models for Cline provider
+// Featured models for Kline provider
 const featuredModels = [
 	{
 		id: "anthropic/claude-sonnet-4",
@@ -120,7 +120,7 @@ const OpenRouterModelPicker: React.FC<OpenRouterModelPickerProps> = ({ isPopup, 
 		const unfilteredModelIds = Object.keys(openRouterModels).sort((a, b) => a.localeCompare(b))
 
 		if (modeFields.apiProvider === "cline") {
-			// For Cline provider: exclude :free models
+			// For Kline provider: exclude :free models
 			return unfilteredModelIds.filter((id) => !id.includes(":free"))
 		} else {
 			// For OpenRouter provider: exclude Cline-specific models
@@ -378,7 +378,7 @@ const OpenRouterModelPicker: React.FC<OpenRouterModelPickerProps> = ({ isPopup, 
 					<VSCodeLink href="https://openrouter.ai/models" style={{ display: "inline", fontSize: "inherit" }}>
 						OpenRouter.
 					</VSCodeLink>
-					If you're unsure which model to choose, Cline works best with{" "}
+					If you're unsure which model to choose, Kline works best with{" "}
 					<VSCodeLink
 						onClick={() => handleModelChange("anthropic/claude-sonnet-4")}
 						style={{ display: "inline", fontSize: "inherit" }}>

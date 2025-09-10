@@ -20,7 +20,7 @@ e4d26be: allow cursorrules and windsurfrules
 c5de50f: Fix Handle @withRetry() SyntaxError when running extension locally issue
 61d2f42: enabled pricing calculation for gemini and vertex + more robust caching & cache tracking for gemini & vertex
 aed152b: add truncation notice when truncating manually
-2fe2405: Migrate Cline Tools Section to new docs
+2fe2405: Migrate Kline Tools Section to new docs
 19cc8bc: Add a timeout setting for the terminal connection, allowing users to adjust this if they are having timeout issues
 03d4410: Added copy button to code blocks.
 c78fe23: addressed race condition in terminal command usage
@@ -59,7 +59,7 @@ d4bd755: fix cost calculation
 -   Add support for custom model ID in AWS Bedrock provider, enabling use of Application Inference Profile (Thanks @clicube!)
 -   Add more robust caching & cache tracking for gemini & vertex providers
 -   Add support for LaTeX rendering
--   Add support for custom API request timeout. Timeouts were 15-30s, but can now be configured via settings for OpenRouter/Cline & Ollama (Thanks @WingsDrafterwork!)
+-   Add support for custom API request timeout. Timeouts were 15-30s, but can now be configured via settings for OpenRouter/Kline & Ollama (Thanks @WingsDrafterwork!)
 -   Add truncation notice when truncating manually
 -   Add a timeout setting for the terminal connection, allowing users to set a time to wait for terminal startup
 -   Add copy button to code blocks
@@ -113,7 +113,7 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 					<b>Drag and drop improvements:</b> Don't forget to hold shift while dragging files!
 				</li>
 				<li>Added more checkpoints across the task, allowing you to restore from more than just file changes.</li>
-				<li>Added support for rendering LaTeX in message responses. (Try asking Cline to show the quadratic formula)</li>
+				<li>Added support for rendering LaTeX in message responses. (Try asking Kline to show the quadratic formula)</li>
 			</ul>
 			<Accordion isCompact className="pl-0">
 				<AccordionItem
@@ -128,11 +128,11 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 					}}>
 					<ul style={ulStyle}>
 						<li>
-							<b>Global Cline Rules:</b> store multiple rules files in Documents/Cline/Rules to share between
+							<b>Global Kline Rules:</b> store multiple rules files in Documents/Cline/Rules to share between
 							projects.
 						</li>
 						<li>
-							<b>Cline Rules Popup:</b> New button in the chat area to view workspace and global cline rules files
+							<b>Kline Rules Popup:</b> New button in the chat area to view workspace and global cline rules files
 							to plug and play specific rules for the task
 						</li>
 						<li>
@@ -188,11 +188,11 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 					the center to undo "<code>{"// rest of code here"}</code>" shenanigans)
 				</li>
 				<li>
-					New <code>search_files</code> tool that lets Cline perform regex searches in your project, letting
+					New <code>search_files</code> tool that lets Kline perform regex searches in your project, letting
 					him refactor code, address TODOs and FIXMEs, remove dead code, and more!
 				</li>
 				<li>
-					When Cline runs commands, you can now type directly in the terminal (+ support for Python
+					When Kline runs commands, you can now type directly in the terminal (+ support for Python
 					environments)
 				</li>
 			</ul>*/}
@@ -232,7 +232,7 @@ ab59bd9: Add stream options back to xai provider
 <changelog>
 ## [3.13.0]
 
--   Add Cline rules popover under the chat field, allowing you to easily add, enable & disable workspace level or global rule files
+-   Add Kline rules popover under the chat field, allowing you to easily add, enable & disable workspace level or global rule files
 -   Add new slash command menu letting you type “/“ to do quick actions like creating new tasks
 -   Add ability to edit past messages, with options to restore your workspace back to that point
 -   Allow sending a message when selecting an option provided by the question or plan tool
@@ -261,10 +261,10 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 			</h3>
 			<ul style={ulStyle}>
 				<li>
-					<b>Global Cline Rules:</b> store multiple rules files in Documents/Cline/Rules to share between projects.
+					<b>Global Kline Rules:</b> store multiple rules files in Documents/Cline/Rules to share between projects.
 				</li>
 				<li>
-					<b>Cline Rules Popup:</b> New button in the chat area to view workspace and global cline rules files to plug
+					<b>Kline Rules Popup:</b> New button in the chat area to view workspace and global cline rules files to plug
 					and play specific rules for the task
 				</li>
 				<li>
@@ -279,12 +279,12 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 			<h4 style={{ margin: "5px 0 5px" }}>Previous Updates:</h4>
 			<ul style={ulStyle}>
 				<li>
-					<b>Model Favorites:</b> You can now mark your favorite models when using Cline & OpenRouter providers for
+					<b>Model Favorites:</b> You can now mark your favorite models when using Kline & OpenRouter providers for
 					quick access!
 				</li>
 				<li>
 					<b>Faster Diff Editing:</b> Improved animation performance for large files, plus a new indicator in chat
-					showing the number of edits Cline makes.
+					showing the number of edits Kline makes.
 				</li>
 				<li>
 					<b>New Auto-Approve Options:</b> Turn off Cline's ability to read and edit files outside your workspace.
@@ -331,11 +331,11 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 					the center to undo "<code>{"// rest of code here"}</code>" shenanigans)
 				</li>
 				<li>
-					New <code>search_files</code> tool that lets Cline perform regex searches in your project, letting
+					New <code>search_files</code> tool that lets Kline perform regex searches in your project, letting
 					him refactor code, address TODOs and FIXMEs, remove dead code, and more!
 				</li>
 				<li>
-					When Cline runs commands, you can now type directly in the terminal (+ support for Python
+					When Kline runs commands, you can now type directly in the terminal (+ support for Python
 					environments)
 				</li>
 			</ul>*/}
@@ -443,7 +443,7 @@ Once the changelog looks good, and the version number looks good, we gotta doubl
 
 
 <detailed_sequence_of_steps>
-# Cline Release Process - Detailed Sequence of Steps
+# Kline Release Process - Detailed Sequence of Steps
 
 ## Before Starting
 1. First, examine the changeset PR without checking it out:
@@ -482,7 +482,7 @@ Once the changelog looks good, and the version number looks good, we gotta doubl
       # Extract username from PR
       USERNAME=$(gh pr view <PR-number> --json author --jq .author.login)
       
-      # Check if user is a member of the Cline organization
+      # Check if user is a member of the Kline organization
 	  # this command is a bit finnicky, but it 100% works. 
 	  # if you see a `Error executing command: The command ran successfully, but we couldn't capture its output. Please proceed accordingly.` error, just retry it until you actually get the output
 	  # don't make any assumptions, just retry the command to actually get the output and determine if they're external or not.

@@ -187,7 +187,7 @@ export const BrowserSettingsSection: React.FC<BrowserSettingsSectionProps> = ({ 
 								color: "var(--vscode-descriptionForeground)",
 								margin: "4px 0 0 0px",
 							}}>
-							Prevent Cline from using browser actions (e.g. launch, click, type).
+							Prevent Kline from using browser actions (e.g. launch, click, type).
 						</p>
 					</div>
 
@@ -258,7 +258,7 @@ export const BrowserSettingsSection: React.FC<BrowserSettingsSectionProps> = ({ 
 									color: "var(--vscode-descriptionForeground)",
 									margin: "0 0 6px 0px",
 								}}>
-								Enable Cline to use your Chrome
+								Enable Kline to use your Chrome
 								{isBundled
 									? "(not detected on your machine)"
 									: detectedChromePath

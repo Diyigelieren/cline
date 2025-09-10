@@ -5,7 +5,7 @@ import { errorService } from "../error"
  * Simple logging utility for the extension's backend code.
  */
 export class Logger {
-	public readonly channelName = "Cline Dev Logger"
+	public readonly channelName = "Kline Dev Logger"
 	static error(message: string, error?: Error) {
 		Logger.#output("ERROR", message, error)
 		errorService.logMessage(message, "error")

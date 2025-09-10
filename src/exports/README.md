@@ -1,6 +1,6 @@
-# Cline API
+# Kline API
 
-The Cline extension exposes an API that can be used by other extensions. To use this API in your extension:
+The Kline extension exposes an API that can be used by other extensions. To use this API in your extension:
 
 1. Copy `src/extension-api/cline.d.ts` to your extension's source directory.
 2. Include `cline.d.ts` in your extension's compilation.
@@ -10,7 +10,7 @@ The Cline extension exposes an API that can be used by other extensions. To use 
     const clineExtension = vscode.extensions.getExtension<ClineAPI>("kd-saoudrizwan.kd-cline")
 
     if (!clineExtension?.isActive) {
-    	throw new Error("Cline extension is not activated")
+    	throw new Error("Kline extension is not activated")
     }
 
     const cline = clineExtension.exports
@@ -33,7 +33,7 @@ The Cline extension exposes an API that can be used by other extensions. To use 
     	// Simulate pressing the secondary button in the chat interface (e.g. 'Reject')
     	await cline.pressSecondaryButton()
     } else {
-    	console.error("Cline API is not available")
+    	console.error("Kline API is not available")
     }
     ```
 

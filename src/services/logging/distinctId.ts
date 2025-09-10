@@ -50,7 +50,7 @@ async function getMachineId(): Promise<string | undefined> {
 
 /*
  * Set the distinct ID for logging and telemetry.
- * This is updated to Cline User ID when authenticated.
+ * This is updated to Kline User ID when authenticated.
  */
 export function setDistinctId(newId: string) {
 	if (_distinctId && _distinctId !== newId) {
@@ -61,7 +61,7 @@ export function setDistinctId(newId: string) {
 
 /*
  * Unique identifier for the current user
- * If authenticated, this will be the Cline User ID.
+ * If authenticated, this will be the Kline User ID.
  * Else, this will be the machine ID, or the anonymous ID as a fallback.
  */
 export function getDistinctId() {

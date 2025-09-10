@@ -252,7 +252,7 @@ const RequestyModelPicker: React.FC<RequestyModelPickerProps> = ({ isPopup, curr
 					<VSCodeLink href="https://app.requesty.ai/router/list" style={{ display: "inline", fontSize: "inherit" }}>
 						Requesty.
 					</VSCodeLink>
-					If you're unsure which model to choose, Cline works best with{" "}
+					If you're unsure which model to choose, Kline works best with{" "}
 					<VSCodeLink
 						onClick={() => handleModelChange("anthropic/claude-3-7-sonnet-latest")}
 						style={{ display: "inline", fontSize: "inherit" }}>

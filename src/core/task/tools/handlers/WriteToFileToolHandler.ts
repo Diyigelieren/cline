@@ -169,7 +169,7 @@ export class WriteToFileToolHandler implements IFullyManagedTool {
 				await setTimeoutPromise(3_500)
 			} else {
 				// Manual approval flow with detailed feedback handling
-				const notificationMessage = `Cline wants to ${fileExists ? "edit" : "create"} ${getWorkspaceBasename(relPath, "WriteToFile.notification")}`
+				const notificationMessage = `Kline wants to ${fileExists ? "edit" : "create"} ${getWorkspaceBasename(relPath, "WriteToFile.notification")}`
 
 				// Show notification
 				showNotificationForApprovalIfAutoApprovalEnabled(
@@ -345,7 +345,7 @@ export class WriteToFileToolHandler implements IFullyManagedTool {
 				diff = removeInvalidChars(diff)
 			}
 
-			// open the editor if not done already.  This is to fix diff error when model provides correct search-replace text but Cline throws error
+			// open the editor if not done already.  This is to fix diff error when model provides correct search-replace text but Kline throws error
 			// because file is not open.
 			if (!config.services.diffViewProvider.isEditing) {
 				await config.services.diffViewProvider.open(relPath)

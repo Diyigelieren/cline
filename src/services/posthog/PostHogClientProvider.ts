@@ -30,7 +30,7 @@ export class PostHogClientProvider {
 
 	/**
 	 * Filters PostHog events before they are sent.
-	 * For exceptions, we only capture those from the Cline extension.
+	 * For exceptions, we only capture those from the Kline extension.
 	 */
 	static eventFilter(event: EventMessage | null) {
 		if (!event || event?.event !== "$exception") {
@@ -47,7 +47,7 @@ export class PostHogClientProvider {
 			if (stacktrace?.value?.toLowerCase().includes("cline")) {
 				return event
 			}
-			// Check stack frames for Cline extension path
+			// Check stack frames for Kline extension path
 			const frames = stacktrace?.frames
 			if (frames?.length) {
 				for (let j = 0; j < frames.length; j++) {

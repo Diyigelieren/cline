@@ -1,9 +1,9 @@
 #!/usr/bin/env npx tsx
 
 /**
- * Simple Cline gRPC Server
+ * Simple Kline gRPC Server
  *
- * This script provides a minimal way to run the Cline core gRPC service
+ * This script provides a minimal way to run the Kline core gRPC service
  * without requiring the full installation, while automatically mocking all external services. Simply run:
  *
  *   # One-time setup (generates protobuf files)
@@ -12,7 +12,7 @@
  *
  * The following components are started automatically:
  *   1. HostBridge test server
- *   2. ClineApiServerMock (mock implementation of the Cline API)
+ *   2. ClineApiServerMock (mock implementation of the Kline API)
  *   3. AuthServiceMock (activated if E2E_TEST="true")
  *
  * Environment Variables for Customization:
@@ -47,7 +47,7 @@ const clineCoreFile = process.env.CLINE_CORE_FILE || "cline-core.js"
 const coreFile = path.join(distDir, clineCoreFile)
 
 async function main(): Promise<void> {
-	console.log("Starting Simple Cline gRPC Server...")
+	console.log("Starting Simple Kline gRPC Server...")
 	console.log(`Workspace: ${WORKSPACE_DIR}`)
 	console.log(`ProtoBus Port: ${PROTOBUS_PORT}`)
 	console.log(`HostBridge Port: ${HOSTBRIDGE_PORT}`)
@@ -67,9 +67,9 @@ async function main(): Promise<void> {
 
 	try {
 		const apiServer = await ClineApiServerMock.startGlobalServer()
-		console.log("Cline API Server started in-process")
+		console.log("Kline API Server started in-process")
 	} catch (error) {
-		console.error("Failed to start Cline API Server:", error)
+		console.error("Failed to start Kline API Server:", error)
 		process.exit(1)
 	}
 
@@ -83,7 +83,7 @@ async function main(): Promise<void> {
 
 	// Start the core service
 	// We run it as a child process to emulate how the extension currently operates
-	console.log("Starting Cline Core Service...")
+	console.log("Starting Kline Core Service...")
 	const coreService: ChildProcess = spawn("node", [clineCoreFile], {
 		cwd: distDir,
 		env: {
@@ -122,14 +122,14 @@ async function main(): Promise<void> {
 		process.exit(code || 0)
 	})
 
-	console.log("Cline gRPC Server is running!")
+	console.log("Kline gRPC Server is running!")
 	console.log(`Connect to: 127.0.0.1:${PROTOBUS_PORT}`)
 	console.log("Press Ctrl+C to stop")
 }
 
 if (require.main === module) {
 	main().catch((error) => {
-		console.error("Failed to start simple Cline server:", error)
+		console.error("Failed to start simple Kline server:", error)
 		process.exit(1)
 	})
 }

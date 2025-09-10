@@ -64,7 +64,7 @@ export class WebFetchToolHandler implements IFullyManagedTool {
 			} else {
 				// Manual approval flow
 				showNotificationForApprovalIfAutoApprovalEnabled(
-					`Cline wants to fetch content from ${url}`,
+					`Kline wants to fetch content from ${url}`,
 					config.autoApprovalSettings.enabled,
 					config.autoApprovalSettings.enableNotifications,
 				)

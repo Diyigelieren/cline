@@ -67,7 +67,7 @@ export type TelemetryMetadata = {
 const MAX_ERROR_MESSAGE_LENGTH = 500
 
 /**
- * TelemetryService handles telemetry event tracking for the Cline extension
+ * TelemetryService handles telemetry event tracking for the Kline extension
  * Uses an abstracted telemetry provider to support multiple analytics backends
  * Respects user privacy settings and VSCode's global telemetry configuration
  */
@@ -147,7 +147,7 @@ export class TelemetryService {
 			AUTO_COMPACT: "task.summarize_task",
 			// Tracks when slash commands or workflows are activated
 			SLASH_COMMAND_USED: "task.slash_command_used",
-			// Tracks when individual Cline rules are toggled on/off
+			// Tracks when individual Kline rules are toggled on/off
 			RULE_TOGGLED: "task.rule_toggled",
 			// Tracks when auto condense setting is toggled on/off
 			AUTO_CONDENSE_TOGGLED: "task.auto_condense_toggled",
@@ -210,7 +210,7 @@ export class TelemetryService {
 
 		// We only enable telemetry if global vscode telemetry is enabled
 		if (!vscode.env.isTelemetryEnabled) {
-			// Only show warning if user has opted in to Cline telemetry but VS Code telemetry is disabled
+			// Only show warning if user has opted in to Kline telemetry but VS Code telemetry is disabled
 			if (didUserOptIn) {
 				const isVsCodeHost = vscode?.env?.uriScheme === "vscode"
 				if (isVsCodeHost) {
@@ -218,7 +218,7 @@ export class TelemetryService {
 						.showMessage({
 							type: ShowMessageType.WARNING,
 							message:
-								"Anonymous Cline error and usage reporting is enabled, but VSCode telemetry is disabled. To enable error and usage reporting for this extension, enable VSCode telemetry in settings.",
+								"Anonymous Kline error and usage reporting is enabled, but VSCode telemetry is disabled. To enable error and usage reporting for this extension, enable VSCode telemetry in settings.",
 							options: {
 								items: ["Open Settings"],
 							},
@@ -233,7 +233,7 @@ export class TelemetryService {
 				} else {
 					void HostProvider.window.showMessage({
 						type: ShowMessageType.WARNING,
-						message: "Anonymous Cline error and usage reporting is enabled, but host telemetry is disabled.",
+						message: "Anonymous Kline error and usage reporting is enabled, but host telemetry is disabled.",
 					})
 				}
 			}
@@ -304,7 +304,7 @@ export class TelemetryService {
 	}
 
 	/**
-	 * Records when cline calls the task completion_result tool signifying that cline is done with the task
+	 * Records when cline calls the task completion_result tool signifying that Kline is done with the task
 	 * @param ulid Unique identifier for the task
 	 */
 	public captureTaskCompleted(ulid: string) {
@@ -882,7 +882,7 @@ export class TelemetryService {
 	}
 
 	/**
-	 * Records when individual Cline rules are toggled on/off
+	 * Records when individual Kline rules are toggled on/off
 	 * @param ulid Unique identifier for the task (to track rule changes within task context)
 	 * @param ruleFileName The filename of the rule (sanitized to exclude full path)
 	 * @param enabled Whether the rule is being enabled (true) or disabled (false)

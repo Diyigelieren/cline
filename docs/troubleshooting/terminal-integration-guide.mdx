@@ -4,10 +4,10 @@ sidebarTitle: "Terminal Troubleshooting"
 description: "Complete guide to resolving terminal integration issues in Cline"
 ---
 
-This guide helps you resolve terminal integration issues in Cline. Terminal integration is crucial for Cline to execute commands and read their output, enabling it to understand errors, test results, and command responses.
+This guide helps you resolve terminal integration issues in Cline. Terminal integration is crucial for Kline to execute commands and read their output, enabling it to understand errors, test results, and command responses.
 
 <Tip>
-	If you're experiencing terminal issues, try switching to a simpler shell like `bash` in the Cline settings, under "Terminal Settings"
+	If you're experiencing terminal issues, try switching to a simpler shell like `bash` in the Kline settings, under "Terminal Settings"
 
     This resolves most terminal integration problems.
 
@@ -19,9 +19,9 @@ Follow this flowchart to quickly identify your issue:
 
 ```mermaid
 graph TD
-    A[Terminal Issue] --> B{Can Cline execute commands?}
+    A[Terminal Issue] --> B{Can Kline execute commands?}
     B -->|No| C[Shell Integration Unavailable]
-    B -->|Yes| D{Can Cline see the output?}
+    B -->|Yes| D{Can Kline see the output?}
     D -->|No| E[Output Capture Failed]
     D -->|Yes| F{Is the output corrupted?}
     F -->|Yes| G[Character Filtering Issue]
@@ -48,7 +48,7 @@ graph TD
 **Symptoms:**
 
 -   Message: "Shell Integration Unavailable"
--   Commands execute but Cline can't read output
+-   Commands execute but Kline can't read output
 -   Terminal works fine manually but not with Cline
 
 **Quick Solutions:**
@@ -57,7 +57,7 @@ graph TD
 
 -   **Switch to bash**
 
-    1. Go to Cline Settings
+    1. Go to Kline Settings
     2. Left-Click the **"Terminal Settings"** tab
     3. Navigate to **"Default Terminal Profile"** and select **"bash"** from the drop-down menu
 
@@ -85,7 +85,7 @@ graph TD
 -   **Use PowerShell 7**
 
     1. Install from Microsoft Store
-    2. Go to Cline Settings
+    2. Go to Kline Settings
     3. Left-Click the **"Terminal Settings"** tab
     4. Navigate to **"Default Terminal Profile"** and select **"PowerShell 7"** from the drop-down menu
 
@@ -96,7 +96,7 @@ graph TD
     3. Uncheck the option
 
 -   **Try Command Prompt**
-    1. Go to Cline Settings
+    1. Go to Kline Settings
     2. Left-Click the **"Terminal Settings"** tab
     3. Navigate to **"Default Terminal Profile"** and select **"Command Prompt"** from the drop-down menu
 
@@ -104,7 +104,7 @@ graph TD
 
 -   **Use bash**
 
-    1. Go to Cline Settings
+    1. Go to Kline Settings
     2. Left-Click the **"Terminal Settings"** tab
     3. Navigate to **"Default Terminal Profile"** and select **"bash"** from the drop-down menu
 
@@ -119,8 +119,8 @@ graph TD
 
 **Symptoms:**
 
--   Cline states in chat: "[Command is running but producing no output]"
--   Commands complete but Cline doesn't see results
+-   Kline states in chat: "[Command is running but producing no output]"
+-   Commands complete but Kline doesn't see results
 -   Commands work sometimes but not consistently
 
 **Solutions:**
@@ -152,10 +152,10 @@ graph TD
 This is a known bug in output processing. Workarounds:
 
 -   Recommend AI to use file output instead
-    1. Tell Cline in chat or Cline rules, to use `command > output.txt` before reading the file/s
+    1. Tell Kline in chat or Kline rules, to use `command > output.txt` before reading the file/s
 
 <Tip>
-	This family of issues is only partially solved in the latest Cline versions, so if you still face this, create a GitHub issue
+	This family of issues is only partially solved in the latest Kline versions, so if you still face this, create a GitHub issue
 	if it is a persistent problem.
 </Tip>
 
@@ -165,26 +165,26 @@ This is a known bug in output processing. Workarounds:
 
 -   Docker builds never complete in Cline
 -   Progress bars consume thousands of tokens
--   The Cline button "Proceed while running" doesn't work properly in chat
+-   The Kline button "Proceed while running" doesn't work properly in chat
 
 <Tip>
-	This family of issues has been solved in latest Cline versions but if you still face any issues, then create a GitHub issue
+	This family of issues has been solved in latest Kline versions but if you still face any issues, then create a GitHub issue
 	for this.
 </Tip>
 
 ## Terminal Settings Explained
 
-Access these in Cline by clicking the settings icon, and navigating to the "Terminal Settings" section:
+Access these in Kline by clicking the settings icon, and navigating to the "Terminal Settings" section:
 
 ### Default Terminal Profile
 
--   **What it does**: Selects which shell Cline uses for commands
+-   **What it does**: Selects which shell Kline uses for commands
 -   **When to change**: If experiencing shell integration issues with your default shell
 -   **Recommended**: - macOS: bash (if zsh has issues) - Windows: PowerShell 7 - Linux: bash
 
 ### Shell Integration Timeout
 
--   **What it does**: How long Cline waits for the terminal to be ready
+-   **What it does**: How long Kline waits for the terminal to be ready
 -   **Default**: 4 seconds
 -   **When to increase**:
     -   Slow shell startup (heavy .zshrc/.bashrc)
@@ -203,7 +203,7 @@ Access these in Cline by clicking the settings icon, and navigating to the "Term
 
 ### Terminal Output Line Limit
 
--   **What it does**: Limits how many lines Cline reads from terminal output
+-   **What it does**: Limits how many lines Kline reads from terminal output
 -   **Default**: 500 lines
 -   **When to adjust**:
     -   Increase for verbose build outputs
@@ -321,7 +321,7 @@ Windows path problems:
 
 For remote development:
 
-1. Install Cline on the remote machine, not locally
+1. Install Kline on the remote machine, not locally
 2. Use SSH extension's integrated terminal
 3. Increase timeout to 15+ seconds
 
@@ -329,7 +329,7 @@ For remote development:
 
 When developing in containers:
 
-1. Install Cline in the container
+1. Install Kline in the container
 2. Use Dev Containers extension
 3. Ensure shell integration scripts are available
 
@@ -405,13 +405,13 @@ echo $VSCODE_SHELL_INTEGRATION  # Should be "1"
 
 ## FAQ
 
-### Why does Cline create so many terminals?
+### Why does Kline create so many terminals?
 
-When shell integration fails, Cline can't reuse terminals safely (they might be running long processes). Enable shell integration or adjust the terminal reuse setting.
+When shell integration fails, Kline can't reuse terminals safely (they might be running long processes). Enable shell integration or adjust the terminal reuse setting.
 
 ### Can I use my custom shell (nushell, xonsh, etc.)?
 
-Cline officially supports bash, zsh, fish, and PowerShell. Custom shells may work but aren't guaranteed. Use bash as a fallback.
+Kline officially supports bash, zsh, fish, and PowerShell. Custom shells may work but aren't guaranteed. Use bash as a fallback.
 
 ### Why do some commands work but others don't?
 
@@ -436,7 +436,7 @@ If you've tried everything:
     ```
 
 2. **Report the Issue**:
-    - Use `/reportbug` in Cline github issues
+    - Use `/reportbug` in Kline github issues
     - Include your debug info
     - Mention which solutions you tried
 
