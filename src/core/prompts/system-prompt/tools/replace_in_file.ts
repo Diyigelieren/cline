@@ -10,9 +10,7 @@ const generic: ClineToolSpec = {
 	id,
 	name: "replace_in_file",
 	description:
-		"Request to replace sections of content in an existing file using SEARCH/REPLACE blocks that define exact changes to specific parts of the file. This tool should be used when you need to make targeted changes to specific parts of a file." +
-        "When working with component files, be aware of the technology stack (KWC or LWC) and ensure replacements maintain consistency with the existing stack. " +
-  "KWC uses 'KingdeeElement' and imports from '@kdcloudjs/kwc', while LWC uses 'LightningElement' and imports from 'lwc'.",      
+		"Request to replace sections of content in an existing file using SEARCH/REPLACE blocks that define exact changes to specific parts of the file. This tool should be used when you need to make targeted changes to specific parts of a file.",
 	parameters: [
 		{
 			name: "path",
@@ -46,12 +44,7 @@ const generic: ClineToolSpec = {
      * Each line must be complete. Never truncate lines mid-way through as this can cause matching failures.
   4. Special operations:
      * To move code: Use two SEARCH/REPLACE blocks (one to delete from original + one to insert at new location)
-     * To delete code: Use empty REPLACE section
-  5. Technology stack awareness:
-     * When working with component files, identify the technology stack (KWC or LWC) from the existing content
-     * For KWC files: Ensure replacements use 'KingdeeElement' and import from '@kdcloudjs/kwc'
-     * For LWC files: Ensure replacements use 'LightningElement' and import from 'lwc'
-     * If converting between stacks, be explicit about the changes and ensure all related imports and base classes are updated consistently`,
+     * To delete code: Use empty REPLACE section`,
 			usage: "Search and replace blocks here",
 		},
 		TASK_PROGRESS_PARAMETER,

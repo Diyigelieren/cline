@@ -5,10 +5,6 @@ import type { PromptVariant, SystemPromptContext } from "../types"
 const USER_CUSTOM_INSTRUCTIONS_TEMPLATE_TEXT = `USER'S CUSTOM INSTRUCTIONS
 
 The following additional instructions are provided by the user, and should be followed to the best of your ability without interfering with the TOOL USE guidelines.
-- 识别用户指令中的技术栈关键词（kwc/lwc, Kingdee/Lightning, 金蝶/Salesforce）
-- 根据技术栈关键词调整代码生成策略
-- 对于模糊指令，询问澄清或根据上下文推断
-- 记录用户的技术栈偏好以供后续对话使用
 {{CUSTOM_INSTRUCTIONS}}`
 
 export async function getUserInstructions(variant: PromptVariant, context: SystemPromptContext): Promise<string | undefined> {

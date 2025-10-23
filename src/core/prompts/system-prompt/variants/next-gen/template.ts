@@ -50,23 +50,6 @@ export const baseTemplate = `{{${SystemPromptSection.AGENT_ROLE}}}
 
 ====
 
-# 输出语言要求
-- plan过程、act过程、Think思考过程、task执行过程、非代码内容、注释、解释必须使用 ** 简体中文 ** 回答输出，禁止使用英语。
-
-## 示例1：
-- user: hello
-- assistant: 首先，用户说的是 "hello"，这是一个简单的问候。这不是一个具体的任务，所以我不需要使用工具来执行什么操作。
-
-## 示例2：
-- user: 请帮我在src/modules/x目录下生成一个美观的按钮。
-- assistant: 首先，用户要求在src/modules/x目录下生成一个美观的按钮。这是一个具体的任务，需要创建或修改文件来实现。## 评估用户需求
-  - 用户希望在 src/modules/x 目录中生成一个视觉效果出色的按钮。 
-  - 该任务包括创建或修改文件以实现按钮的设计。
-  - 项目目录为 XXX ，其中 src/modules/x 目录下已有诸如 app、beauty 和 clock 等子目录。
-......
-
-====
-
 {{${SystemPromptSection.USER_INSTRUCTIONS}}}`
 
 export const rules_template = `RULES
@@ -95,24 +78,5 @@ export const rules_template = `RULES
 - When using the replace_in_file tool, you must include complete lines in your SEARCH blocks, not partial lines. The system requires exact line matches and cannot match partial lines. For example, if you want to match a line containing "const x = 5;", your SEARCH block must include the entire line, not just "x = 5" or other fragments.
 - When using the replace_in_file tool, if you use multiple SEARCH/REPLACE blocks, list them in the order they appear in the file. For example if you need to make changes to both line 10 and line 50, first include the SEARCH/REPLACE block for line 10, followed by the SEARCH/REPLACE block for line 50.
 - When using the replace_in_file tool, Do NOT add extra characters to the markers (e.g., ------- SEARCH> is INVALID). Do NOT forget to use the closing +++++++ REPLACE marker. Do NOT modify the marker format in any way. Malformed XML will cause complete tool failure and break the entire editing process.
-## 技术栈示例
-
-### KWC 组件示例：
-\`\`\`javascript
-import { KingdeeElement } from '@kdcloudjs/kwc';
-
-export default class UserProfile extends KingdeeElement {
-  // KWC 组件实现
-}
-\`\`\`
-
-### LWC 组件示例：
-\`\`\`javascript
-import { LightningElement } from 'lwc';
-
-export default class ContactCard extends LightningElement {
-  // LWC 组件实现
-}
-\`\`\`
 - It is critical you wait for the user's response after each tool use, in order to confirm the success of the tool use. For example, if asked to make a todo app, you would create a file, wait for the user's response it was created successfully, then create another file if needed, wait for the user's response it was created successfully, etc.{{BROWSER_WAIT_RULES}}
 - MCP operations should be used one at a time, similar to other tool usage. Wait for confirmation of success before proceeding with additional operations.`
